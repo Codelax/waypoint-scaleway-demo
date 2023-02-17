@@ -17,8 +17,8 @@ resource "scaleway_k8s_cluster" "cluster" {
 resource "scaleway_k8s_pool" "pool" {
 	cluster_id = scaleway_k8s_cluster.cluster.id
 	name = "main-pool"
-	node_type = "PLAY2-MICRO"
-	size = 2
+	node_type = "DEV1-M"
+	size = 1
 }
 
 resource "scaleway_container_namespace" "namespace" {}
