@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"sync/atomic"
 
 	"github.com/labstack/echo/v4"
@@ -16,7 +17,7 @@ func main() {
 	e.GET("/", func(c echo.Context) error {
 		valSync := val.Add(1)
 
-		return c.String(http.StatusOK, fmt.Sprintf("Hello World %d", valSync))
+		return c.String(http.StatusOK, fmt.Sprintf("Hello World %s %d", os.Getenv("ENV_TEST"), valSync))
 	})
 
 	log.Fatalln(e.Start(":1337"))
