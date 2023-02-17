@@ -6,7 +6,7 @@ app "web" {
 
     registry {
       use "docker" {
-        image = "rg.fr-par.scw.cloud/funcscwtfnsfriendlypoincarebz3oqsvh/web"
+        image = "rg.fr-par.scw.cloud/funcscwtfnsquirkykeplerxq30qhxw/web"
         tag   = "latest"
       }
     }
@@ -15,9 +15,8 @@ app "web" {
   deploy {
     use "scaleway-container" {
       port = 1337
-      namespace = "bf5ff253-0e0a-4318-9e24-8b7258716a2d"
+      namespace = "de0076bb-8745-4815-99de-d6d692f5119d"
       region = "fr-par"
-      env = {}
     }
   }
 }
